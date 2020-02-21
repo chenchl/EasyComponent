@@ -1,6 +1,6 @@
 package cn.chenchl.easycomponent
 
-
+import cn.chenchl.easycomponent.utils.StringUtil
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 
@@ -20,7 +20,7 @@ class EasyComponent implements Plugin<Project> {
         String taskNames = project.gradle.startParameter.taskNames.toString()
         System.out.println("taskNames is " + taskNames)
         //获取当前task任务对象module
-        String module = project.path
+        String module = project.path.substring(project.path.lastIndexOf(':') + 1)
         System.out.println("current module is " + module)
         //包装task任务信息
         AssembleTask assembleTask = getTaskInfo(project.gradle.startParameter.taskNames)
@@ -61,7 +61,8 @@ class EasyComponent implements Plugin<Project> {
     private void autoApplyAndImplement(boolean isRunAlone, Project project, String module, AssembleTask assembleTask) {
         if (isRunAlone) {//当前任务是独立运行模块 需要更改其配置com.android.application
             project.apply plugin: 'com.android.application'
-            if (module != project.rootProject.property("mainModuleName")) {//不是项目定义的壳host module的情况下需要指定sourceSet
+            if (module != project.rootProject.property("mainModuleName")) {
+                //不是项目定义的壳host module的情况下需要指定sourceSet
                 String runAlonePath = 'src/main/runalone'
 
                 //有自定义路径则使用自定义路径替换
