@@ -1,6 +1,7 @@
 apply plugin: 'groovy'
-apply plugin: 'maven'
-group='cn.chenchl.easycomponent'
+//apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.chenchl.easycomponent'
 
 dependencies {
     //gradle sdk
@@ -9,6 +10,7 @@ dependencies {
     implementation localGroovy()
 }
 
+/*
 uploadArchives {
     configuration = configurations.archives
     repositories {
@@ -25,4 +27,4 @@ uploadArchives {
             }
         }
     }
-}
+}*/
