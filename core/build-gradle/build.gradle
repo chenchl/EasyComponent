@@ -1,7 +1,7 @@
 apply plugin: 'groovy'
-apply plugin: 'maven'
-//apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.chenchl.EasyComponent'
+//apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+group='cn.chenchl.easycomponent'
 
 dependencies {
     //gradle sdk
