@@ -1,2 +1,2 @@
-include ':sample:app', ':core:build-gradle', ':sample:componenta', ':sample:componentb'
+include ':sample:app', ':core:build-gradle', ':sample:componenta', ':sample:componentb', ':sample:lib_router'
 rootProject.name='EasyComponent'
