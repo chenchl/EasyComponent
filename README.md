@@ -1,2 +1,2 @@
 # EasyComponent
-简单易用的Android组件化gradle配置小插件 仅需要几行配置信息即可免除组件module gradle配置的麻烦
+EasyComponentPlugin demo项目 演示了EasyComponentPlugin配合ARouter做组件化的基本流程
