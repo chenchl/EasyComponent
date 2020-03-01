@@ -33,6 +33,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api 'com.alibaba:arouter-api:1.5.0'
-    api 'com.github.chenchl.EasyComponentPlugin:lib:0.4.0'
+    api 'com.github.chenchl.EasyComponentPlugin:lib:0.4.2'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
 }
